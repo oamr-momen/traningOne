@@ -1,0 +1,378 @@
+.header {
+  position: relative;
+  height: 600px;
+  position: relative;
+  background: url("../images/main-header.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  .navbar {
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    box-shadow: 0px 0px 3px #c8c2c2;
+    padding: 20px;
+    transition: all 0.3s linear;
+    z-index: 999;
+    .container {
+      .navbar-brand {
+        color: #fff;
+        font-size: 35px;
+        span {
+          color: $mainColor;
+        }
+      }
+      .navbar-toggler {
+        background: transparent;
+        border: none;
+        color: #fff;
+        font-size: 27px;
+        outline: none;
+        i {
+          transition: all 0.3s ease-in-out;
+        }
+        &:hover {
+          i {
+            color: $mainColor;
+          }
+        }
+      }
+      .navbar-collapse {
+        flex-grow: 0;
+        .close-nav {
+          display: none;
+        }
+        .navbar-nav {
+          .dropdown-item {
+            transition: all .3s linear;
+            padding-top: 10px;
+            width: 200px;
+            &:hover {
+              color: $mainColor;
+              background: #FFF;
+            }
+          }
+          .my-down {
+            margin-right: 14px;
+            position: relative;
+            .my-down-a {
+              position: relative;
+              i {
+                position: absolute;
+                top: 12px;
+                right: -12px;
+                transition: all .3s linear;
+              }
+            }
+            .my-down-menu {
+              position: absolute;
+              background: #fff;
+              border-top: 2px solid $mainColor;
+              padding: 5px 0;
+              .dropdown-item {
+              }
+              .my-down-in {
+                position: relative;
+                i {
+                  position: absolute;
+                  top: 9px;
+                  right: 16px;
+                  cursor: pointer;
+                  transition: all .3s linear;
+                }
+                .my-down-menu-in {
+                  border-top: 2px solid $mainColor;
+                  background: #fff;
+                  position: absolute;
+                  top: 3px;
+                  padding: 10px 0;
+                }
+              }
+            }
+          }
+          .nav-item {
+            font-size: 17px;
+            padding-right: 14px;
+            .nav-link {
+              color: #ffffffb3;
+              transition: all 0.1s linear;
+              &:hover {
+                color: $mainColor !important ;
+              }
+            }
+          }
+          .nav-item.active {
+            .nav-link {
+              color: $mainColor !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .header-info {
+    margin: 0 auto;
+    width: 41%;
+    text-align: center;
+    padding-top: 250px;
+    h2 {
+      font-size: 51px;
+      color: #fff;
+    }
+    p {
+      color: #fff;
+      margin: 20px 0 51px;
+      font-size: 30px;
+    }
+    button {
+      border-radius: 20px;
+      padding: 10px 30px;
+      background-color: $mainColor;
+      outline: none;
+      border: none;
+      color: #fff;
+      transition: all 0.2s linear;
+      &:hover {
+        background-color: #000;
+      }
+    }
+  }
+  .scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    font-size: 40px;
+    color: #fff;
+    margin-left: -10px;
+    cursor: pointer;
+    transition: all 0.3s linear;
+    &:hover {
+      color: $mainColor;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .header {
+    .navbar {
+      padding: 0 20px;
+      .container {
+        .navbar-brand {
+          span {
+          }
+        }
+        .navbar-toggler {
+        }
+        .navbar-collapse {
+          overflow-y: scroll;
+          position: fixed;
+          top: 0;
+          width: 270px;
+          background-color: #fff;
+          padding: 40px 20px;
+          height: 100%;
+          .close-nav {
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+            transition: all 0.3s linear;
+            &:hover {
+              color: $mainColor;
+            }
+          }
+          .navbar-nav {
+            .my-down {
+              .my-down-a {
+                i {
+                  position: absolute;
+                  top: 6px;
+                  right: -12px;
+                  display: block;
+                  background: #eee;
+                  width: 35px;
+                  height: 35px;
+                  line-height: 35px;
+                  border-radius: 50%;
+                  text-align: center;
+                }
+              }
+              .my-down-menu {
+                position: static;
+                padding: 0;
+                border: none;
+                .my-down-in {
+                  &:hover {
+                    background-color: #fff;
+                  }
+                  i {
+                    position: absolute;
+                    top: 6px;
+                    right: -12px;
+                    display: block;
+                    background: #eee;
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;
+                    border-radius: 50%;
+                    text-align: center;
+                    color: $mainColor;
+                  }
+                  .my-down-menu-in {
+                    position: static;
+                    border: none;
+                    &:before {
+                      content: "";
+                    }
+                    .dropdown-item {
+                    }
+                  }
+                }
+              }
+            }
+            .nav-item {
+              font-size: 20px;
+              margin: 10px 0;
+              .nav-link {
+                color: #212529 !important;
+                transition: all 0.3s linear;
+              }
+            }
+          }
+        }
+      }
+    }
+    .header-info {
+      margin: 0 auto;
+      width: 41%;
+      text-align: center;
+      padding-top: 250px;
+      h2 {
+        font-size: 30px;
+        color: #fff;
+      }
+      p {
+        color: #fff;
+        margin: 20px 0 51px;
+        font-size: 15px;
+      }
+      button {
+        border-radius: 20px;
+        padding: 10px 30px;
+        background-color: $mainColor;
+        outline: none;
+        border: none;
+        color: #fff;
+        transition: all 0.2s linear;
+        &:hover {
+          background-color: #000;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 575.98px) {
+  .header {
+    .navbar {
+      padding: 0 20px;
+      .container {
+        .navbar-brand {
+          span {
+          }
+        }
+        .navbar-toggler {
+        }
+        .navbar-collapse {
+          overflow-y: scroll;
+          position: fixed;
+          top: 0;
+          width: 270px;
+          background-color: #fff;
+          padding: 40px 20px;
+          height: 100%;
+          .close-nav {
+            display: block;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+            transition: all 0.3s linear;
+            &:hover {
+              color: $mainColor;
+            }
+          }
+          .navbar-nav {
+            .my-down {
+              .my-down-a {
+                i {
+                  position: absolute;
+                  top: 6px;
+                  right: -12px;
+                  display: block;
+                  background: #eee;
+                  width: 35px;
+                  height: 35px;
+                  line-height: 35px;
+                  border-radius: 50%;
+                  text-align: center;
+                }
+              }
+              .my-down-menu {
+                position: static;
+                padding: 0;
+                border: none;
+                .my-down-in {
+                  &:hover {
+                    background-color: #fff;
+                  }
+                  i {
+                    position: absolute;
+                    top: 6px;
+                    right: -12px;
+                    display: block;
+                    background: #eee;
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;
+                    border-radius: 50%;
+                    text-align: center;
+                    color: $mainColor;
+                  }
+                  .my-down-menu-in {
+                    position: static;
+                    border: none;
+                    &:before {
+                      content: "";
+                    }
+                    .dropdown-item {
+                    }
+                  }
+                }
+              }
+            }
+            .nav-item {
+              font-size: 20px;
+              margin: 10px 0;
+              .nav-link {
+                color: #212529 !important;
+                transition: all 0.3s linear;
+              }
+            }
+          }
+        }
+      }
+    }
+    .header-info {
+      padding-top: 20vh;
+      h2 {
+        font-size: 30px;
+      }
+      p {
+        font-size: 15px;
+      }
+      button {
+        padding: 10px 10px;
+      }
+    }
+  }
+}
